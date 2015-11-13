@@ -310,6 +310,7 @@ public class RealEstateApplication
     {
         int xCoordinate = 0;
         String grid = "";
+        boolean valid = true;
         //Get the X coordinates
             do
             {
@@ -320,12 +321,16 @@ public class RealEstateApplication
                     xCoordinate = Integer.parseInt(JOptionPane.showInputDialog("X denotes house on the market, O for Sold, "
                             + "and * for not handled by this reaslestate company.\n"
                             +grid + "\n\nPlease enter the X coordinate. Must be between 1 & 5"));
-                }catch(NumberFormatException e){}
                 if (xCoordinate < 0 || xCoordinate > 5)
                 {
                     JOptionPane.showMessageDialog(null, "ERROR!  Please enter an integer between 1 and 5");
+                    valid = false;
                 }
-            }while (xCoordinate < 0 || xCoordinate > 5);
+                }catch(NumberFormatException e){
+                    JOptionPane.showMessageDialog(null, "Coordinates MUST be entered in numaric format");
+                    valid = false;
+                }
+            }while (!valid);
         return xCoordinate;
     }
     /*
@@ -337,6 +342,7 @@ public class RealEstateApplication
     {
         int yCoordinate = 0;
         String grid = "";
+        boolean valid = true;
         //Get the Y coordinates
         do
         {
@@ -347,12 +353,16 @@ public class RealEstateApplication
             yCoordinate = Integer.parseInt(JOptionPane.showInputDialog("X denotes house on the market, O for Sold, "
                             + "and * for not handled by this reaslestate company.\n"
                             +grid + "\n\nPlease enter the X coordinate. Must be between 1 & 5"));
-            }catch(NumberFormatException e){}
             if (yCoordinate < 0 || yCoordinate > 5)
             {
                 JOptionPane.showMessageDialog(null, "ERROR!  Please enter an integer between 1 and 5");
+                valid = false;
             }
-        }while (yCoordinate < 0 || yCoordinate > 5);
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null, "Coordinates MUST be entered in numaric format");
+                valid = false;
+            }
+        }while (!valid);
         return yCoordinate;
     }
     
