@@ -306,7 +306,7 @@ public class RealEstateApplication
                 grid = printGrid(data);
                 try
                 {
-                    xCoordinate = Integer.parseInt(JOptionPane.showInputDialog("X denotes house on the market, O for Sold, "
+                    xCoordinate = Integer.parseInt(JOptionPane.showInputDialog("O denotes house on the market, X for Sold, "
                             + "and * for not handled by this reaslestate company.\n"
                             +grid + "\n\nPlease enter the X coordinate. Must be between 1 & 5"));
                 }catch(NumberFormatException e){
@@ -334,7 +334,7 @@ public class RealEstateApplication
             grid = printGrid(data);
             try
             {
-            yCoordinate = Integer.parseInt(JOptionPane.showInputDialog("X denotes house on the market, O for Sold, "
+            yCoordinate = Integer.parseInt(JOptionPane.showInputDialog("O denotes house on the market, X for Sold, "
                             + "and * for not handled by this reaslestate company.\n"
                             +grid + "\n\nPlease enter the Y coordinate. Must be between 1 & 5"));
             }catch(NumberFormatException e){
